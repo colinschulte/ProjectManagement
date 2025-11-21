@@ -47,15 +47,15 @@ Compile all .cpp files in src/ and include the headers:
         src/controllers/*.cpp \
         src/views/*.cpp \
         src/utils/*.cpp \
-        -o HealthMVC
+        -o TotalCarePlus
 
 
 Run the program:
 
-    ./HealthMVC
+    ./TotalCarePlus
 
 
-On Windows, replace ./HealthMVC with HealthMVC.exe.
+On Windows, replace ./TotalCarePlus with TotalCarePlus.exe.
 
 ## Usage
 
