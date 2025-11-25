@@ -20,17 +20,60 @@ MVC Architecture: Separate models, views, and controllers for maintainability.
 
 In-memory database: Mock storage for demo and testing purposes.
 
-    Project Structure
-    ProjectRoot/
-    │
-    ├── include/
-    │   ├── models/          # Classes: User, Caregiver, Doctor, Claim, Insurance, Medication, UserMedication, Appointment
-    │   ├── controllers/     # Controllers: UserLogin, ReadAppointment, ReadMedications, ReadInsurance, MakeAppointment
-    │   ├── views/           # Views: Login, Home, Appointments, Medications, Insurance
-    │   └── utils/           # Database helper (in-memory storage)
-    │
-    ├── src/                 # Implementation files for models, views, controllers, utils
-    ├── main.cpp             # Application entry point
+ProjectRoot/
+│
+├── include/                     # Header files
+│   ├── models/
+│   │   ├── Caregiver.h
+│   │   ├── Claim.h
+│   │   ├── User.h
+│   │   ├── Doctor.h
+│   │   ├── Insurance.h
+│   │   ├── Medication.h
+│   │   └── UserMedication.h
+│   │
+│   ├── controllers/
+│   │   ├── UserLoginController.h
+│   │   ├── ReadAppointmentController.h
+│   │   ├── ReadMedicationsController.h
+│   │   ├── ReadInsuranceController.h
+│   │   └── MakeAppointmentController.h
+│   │
+│   └── views/
+│       ├── LoginView.h
+│       ├── HomeView.h
+│       ├── AppointmentsView.h
+│       ├── MedicationsView.h
+│       └── InsuranceView.h
+│
+├── src/                         # Implementation files
+│   ├── models/
+│   │   ├── Caregiver.cpp
+│   │   ├── Claim.cpp
+│   │   ├── User.cpp
+│   │   ├── Doctor.cpp
+│   │   ├── Insurance.cpp
+│   │   ├── Medication.cpp
+│   │   └── UserMedication.cpp
+│   │
+│   ├── controllers/
+│   │   ├── UserLoginController.cpp
+│   │   ├── ReadAppointmentController.cpp
+│   │   ├── ReadMedicationsController.cpp
+│   │   ├── ReadInsuranceController.cpp
+│   │   └── MakeAppointmentController.cpp
+│   │
+│   └── views/
+│       ├── LoginView.cpp
+│       ├── HomeView.cpp
+│       ├── AppointmentsView.cpp
+│       ├── MedicationsView.cpp
+│       └── InsuranceView.cpp
+│
+├── utils/                       # Helpers (optional)
+│   └── Database.h / .cpp        
+│
+└── main.cpp                     # Entry point
 
 ## Getting Started
 Prerequisites
