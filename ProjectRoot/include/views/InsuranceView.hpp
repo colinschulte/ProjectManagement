@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "Insurance.h"
+#include "Insurance.hpp"
 
 class InsuranceView {
 public:

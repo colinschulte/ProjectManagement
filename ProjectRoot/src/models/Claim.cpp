@@ -1,10 +1,11 @@
-#include "claim.h"
-using namespace std;
+#include "Claim.hpp"
+#include <iostream>
 
+// ==============================
+//        Constructors
+// ==============================
 Claim::Claim()
-    : amountCharged(0),
-      amountAllowed(Money(0)),
-      amountPaid(Money(0)),
+    : amountCharged(0), amountAllowed(0), amountPaid(0),
       status(ClaimStatus::Submitted) {}
 
 Claim::Claim(const string &id,
@@ -19,60 +20,68 @@ Claim::Claim(const string &id,
       providerName(provider),
       dateOfService(dos),
       amountCharged(charged),
-      amountAllowed(Money(0)),
-      amountPaid(Money(0)),
-      status(ClaimStatus::Submitted)
-{
-    createdAt = "N/A";
-    updatedAt = "N/A";
-}
+      amountAllowed(0),
+      amountPaid(0),
+      status(ClaimStatus::Submitted) {}
 
+// ==============================
+//        Validation
+// ==============================
 bool Claim::validate(string &problem) const {
-    if (claimId.empty())       { problem = "claimId empty"; return false; }
-    if (policyNumber.empty())  { problem = "policyNumber empty"; return false; }
-    if (claimantName.empty())  { problem = "claimantName empty"; return false; }
-    if (dateOfService.empty()) { problem = "dateOfService empty"; return false; }
+    if (claimId.empty()) { problem = "Claim ID is empty"; return false; }
+    if (policyNumber.empty()) { problem = "Policy number is empty"; return false; }
+    if (claimantName.empty()) { problem = "Claimant name is empty"; return false; }
+    if (providerName.empty()) { problem = "Provider name is empty"; return false; }
+    if (amountCharged.dollars < 0) { problem = "Amount charged cannot be negative"; return false; }
     return true;
 }
 
+// ==============================
+//      Status Transitions
+// ==============================
 void Claim::approve(Money allowed, const string &note) {
-    status = ClaimStatus::Approved;
     amountAllowed = allowed;
+    status = ClaimStatus::Approved;
     statusNote = note;
-    markUpdated("Updated");
 }
 
 void Claim::deny(const string &reason) {
     status = ClaimStatus::Denied;
     statusNote = reason;
-    amountAllowed = Money(0);
-    markUpdated("Updated");
 }
 
 void Claim::pay(Money paid) {
     amountPaid = paid;
     status = ClaimStatus::Paid;
-    markUpdated("Updated");
 }
 
 void Claim::reopen(const string &note) {
     status = ClaimStatus::Reopened;
     statusNote = note;
-    markUpdated("Updated");
 }
 
+// ==============================
+//       Serialization
+// ==============================
+string Claim::toString() const {
+    string out = "Claim ID: " + claimId + "\n";
+    out += "Policy Number: " + policyNumber + "\n";
+    out += "Claimant: " + claimantName + "\n";
+    out += "Provider: " + providerName + "\n";
+    out += "Date of Service: " + dateOfService + "\n";
+    out += "Amount Charged: $" + amountCharged.str() + "\n";
+    out += "Amount Allowed: $" + amountAllowed.str() + "\n";
+    out += "Amount Paid: $" + amountPaid.str() + "\n";
+    out += "Status: " + claimStatusToString(status) + "\n";
+    out += "Status Note: " + statusNote + "\n";
+    out += "Created At: " + createdAt + "\n";
+    out += "Updated At: " + updatedAt + "\n";
+    return out;
+}
+
+// ==============================
+//        Private Helpers
+// ==============================
 void Claim::markUpdated(const string &time) {
     updatedAt = time;
-}
-
-string Claim::toString() const {
-    return "Claim[" + claimId + "] policy=" + policyNumber +
-           " claimant=" + claimantName +
-           " provider=" + providerName +
-           " dos=" + dateOfService +
-           " charged=$" + amountCharged.str() +
-           " allowed=$" + amountAllowed.str() +
-           " paid=$" + amountPaid.str() +
-           " status=" + claimStatusToString(status) +
-           " note=" + statusNote;
 }

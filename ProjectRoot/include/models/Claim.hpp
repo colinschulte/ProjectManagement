@@ -1,8 +1,9 @@
-#ifndef CLAIM_H
-#define CLAIM_H
+#ifndef CLAIM_HPP
+#define CLAIM_HPP
 
 #include <string>
 #include <vector>
+
 using namespace std;
 
 enum class ClaimStatus {
@@ -26,7 +27,6 @@ inline std::string claimStatusToString(ClaimStatus s) {
     }
 }
 
-// Simple money type using whole dollars
 struct Money {
     int dollars;
 
@@ -38,14 +38,14 @@ struct Money {
 
 class Claim {
 public:
-    // identifiers
+    // Identifiers
     string claimId;
     string policyNumber;
     string claimantName;
     string providerName;
 
-    // clinical/billing
-    string dateOfService;  
+    // Clinical / billing
+    string dateOfService;
     vector<string> procedureCodes;
     vector<string> diagnosisCodes;
 
@@ -56,10 +56,11 @@ public:
     ClaimStatus status;
     string statusNote;
 
-    // timestamps (manually set); no <chrono>
+    // Timestamps
     string createdAt;
     string updatedAt;
 
+    // Constructors
     Claim();
     Claim(const string &id,
           const string &policy,
@@ -68,13 +69,16 @@ public:
           const string &dos,
           Money charged);
 
+    // Validation
     bool validate(string &problem) const;
 
+    // Status transitions
     void approve(Money allowed, const string &note);
     void deny(const string &reason);
     void pay(Money paid);
     void reopen(const string &note);
 
+    // Serialization
     string toString() const;
 
 private:
