@@ -11,7 +11,6 @@ int doctor_id;
 std::string start_date;
 std::string end_date;
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
 UserMedication() = default;
 UserMedication(int userId,
                int medId,

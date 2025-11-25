@@ -13,7 +13,6 @@ std::string frequency;
 int number_of_refills;
 std::string refill_date;
 
-----------------------------------------------------------------------------------------------------------------------------------------------
 Medication() = default;
 Medication(int medId,
            int insId,

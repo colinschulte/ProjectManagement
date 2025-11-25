@@ -16,7 +16,6 @@ std::string reason;
 std::string status;
 std::string emergency_contact;
 
-----------------------------------------------------------------------------------------------------------------------------------------------
 Appointment() = default;
 Appointment(int apptId,
 		   int userId,
