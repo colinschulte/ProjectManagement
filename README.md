@@ -1,8 +1,12 @@
 # TotalCare+
+A C++ Console Health App
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 This README file will detail our project which is a mobile application called TotalCare+
 =======
+=======
+>>>>>>> origin
 A simple console-based health management application in C++ using an MVC-inspired architecture.
 This project manages users, caregivers, doctors, claims, medications, insurance, and appointments. It is designed as a starting point for extending into GUI apps or web APIs.
 
@@ -26,6 +30,7 @@ In-memory database: Mock storage for demo and testing purposes.
     │
     ├── include/                     # Header files
     │   ├── models/
+<<<<<<< HEAD
     │   │   ├── Caregiver.hpp
     │   │   ├── Claim.hpp
     │   │   ├── User.hpp
@@ -47,6 +52,29 @@ In-memory database: Mock storage for demo and testing purposes.
     │       ├── AppointmentsView.hpp
     │       ├── MedicationsView.hpp
     │       └── InsuranceView.hpp
+=======
+    │   │   ├── Caregiver.h
+    │   │   ├── Claim.h
+    │   │   ├── User.h
+    │   │   ├── Doctor.h
+    │   │   ├── Insurance.h
+    │   │   ├── Medication.h
+    │   │   └── UserMedication.h
+    │   │
+    │   ├── controllers/
+    │   │   ├── UserLoginController.h
+    │   │   ├── ReadAppointmentController.h
+    │   │   ├── ReadMedicationsController.h
+    │   │   ├── ReadInsuranceController.h
+    │   │   └── MakeAppointmentController.h
+    │   │
+    │   └── views/
+    │       ├── LoginView.h
+    │       ├── HomeView.h
+    │       ├── AppointmentsView.h
+    │       ├── MedicationsView.h
+    │       └── InsuranceView.h
+>>>>>>> origin
     │
     ├── src/                         # Implementation files
     │   ├── models/
@@ -157,5 +185,9 @@ Extend to GUI or REST API using C++ frameworks
 
 Author
 
+<<<<<<< HEAD
 Maelynn Black, Monty Lawshé, Colin Schulte  — TotalCare+ project prototype
 >>>>>>> Stashed changes
+=======
+Maelynn Black, Monty Lawshé, Colin Schulte  — TotalCare+ project prototype
+>>>>>>> origin
