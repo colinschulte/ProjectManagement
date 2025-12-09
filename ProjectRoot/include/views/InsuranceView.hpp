@@ -1,9 +1,9 @@
-#ifndef INSURANCE_VIEW_H
-#define INSURANCE_VIEW_H
+#ifndef INSURANCE_VIEW_HPP
+#define INSURANCE_VIEW_HPP
 
 #include <iostream>
 #include <vector>
-#include "Insurance.hpp"
+#include "models/Insurance.hpp"
 
 class InsuranceView {
 public:

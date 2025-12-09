@@ -1,4 +1,4 @@
-#include "ClaimView.hpp"
+#include "views/ClaimView.hpp"
 
 void ClaimView::displayList(const std::vector<Claim>& claims) {
     std::cout << "=============================\n";
@@ -24,6 +24,6 @@ void ClaimView::displayDetail(const Claim& claim) {
     std::cout << "=============================\n";
     std::cout << "       CLAIM DETAILS         \n";
     std::cout << "=============================\n";
-    std::cout << claim.toString();
+    std::cout << claim.toStringClaim();
     std::cout << "=============================\n";
 }

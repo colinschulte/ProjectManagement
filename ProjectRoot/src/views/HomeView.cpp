@@ -1,4 +1,4 @@
-#include "HomeView.h"
+#include "views/HomeView.hpp"
 
 void HomeView::display() {
     std::cout << "======================" << std::endl;

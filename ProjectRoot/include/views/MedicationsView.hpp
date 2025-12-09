@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <vector>
-#include "Medication.hpp"
-#include "UserMedication.hpp"
+#include "models/Medication.hpp"
+#include "models/UserMedication.hpp"
 
 class MedicationsView {
 public:

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "Claim.hpp"
+#include "models/Claim.hpp"
 
 class ClaimView {
 public:

@@ -1,4 +1,4 @@
-#include "AppointmentsView.h"
+#include "views/AppointmentsView.hpp"
 
 void AppointmentsView::display(const std::vector<Appointment>& appointments)
 {
@@ -17,12 +17,12 @@ void AppointmentsView::display(const std::vector<Appointment>& appointments)
             std::cout << "Appointment ID:      " << appt.appointment_id << std::endl;
             std::cout << "Date:                " << appt.appointment_date << std::endl;
             std::cout << "Time:                " << appt.appointment_time << std::endl;
-            std::cout << "Doctor ID:           " << appt.doctor_id << std::endl;
-            std::cout << "Insurance ID:        " << appt.insurance_id << std::endl;
-            std::cout << "Claim ID:            " << appt.claim_id << std::endl;
-            std::cout << "Reason:              " << appt.reason << std::endl;
-            std::cout << "Status:              " << appt.status << std::endl;
-            std::cout << "Emergency Contact:   " << appt.emergency_contact << std::endl;
+            std::cout << "Doctor ID:           " << appt.appointment_doctor_id << std::endl;
+            std::cout << "Insurance ID:        " << appt.appointment_insurance_id << std::endl;
+            std::cout << "Claim ID:            " << appt.appointment_claim_id << std::endl;
+            std::cout << "Reason:              " << appt.appointment_reason << std::endl;
+            std::cout << "Status:              " << appt.appointment_status << std::endl;
+            std::cout << "Emergency Contact:   " << appt.appointment_emergency_contact << std::endl;
         }
     }
 

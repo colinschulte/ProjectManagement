@@ -6,6 +6,8 @@
 
 class LoginView {
 public:
+    int emailValue;
+    int passwordValue;
     void display();
 };
 

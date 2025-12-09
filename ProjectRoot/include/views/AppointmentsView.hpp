@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "Appointment.hpp"
+#include "models/Appointment.hpp"
 
 class AppointmentsView {
 public:

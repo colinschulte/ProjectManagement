@@ -1,53 +1,61 @@
-#include "Medication.hpp"
+#include "models/Medication.hpp"
 
+
+int medication_id;
+int medication_insurance_id;
+std::string medication_name;
+std::string medication_dosage;
+std::string medication_frequency;
+int medication_number_of_refills;
+std::string medication_refill_date;
 // Constructors
 Medication::Medication()
-    : medication_id(0), insurance_id(0), name(""), dosage(""),
-      frequency(""), number_of_refills(0), refill_date("") {}
+    : medication_id(0), medication_insurance_id(0), medication_name(""), medication_dosage(""),
+      medication_frequency(""), medication_number_of_refills(0), medication_refill_date("") {}
 
 Medication::Medication(int medId,
-                       int insId,
+                       int medInsId,
                        const std::string& medName,
                        const std::string& medDosage,
                        const std::string& medFrequency,
-                       int refills,
-                       const std::string& refillDate)
+                       int medRefills,
+                       const std::string& medRefillDate)
     : medication_id(medId),
-      insurance_id(insId),
-      name(medName),
-      dosage(medDosage),
-      frequency(medFrequency),
-      number_of_refills(refills),
-      refill_date(refillDate) {}
+      medication_insurance_id(medInsId),
+      medication_name(medName),
+      medication_dosage(medDosage),
+      medication_frequency(medFrequency),
+      medication_number_of_refills(medRefills),
+      medication_refill_date(medRefillDate) {}
 
 // Getters
-int Medication::getId() const { return medication_id; }
-int Medication::getInsuranceId() const { return insurance_id; }
-std::string Medication::getName() const { return name; }
-std::string Medication::getDosage() const { return dosage; }
-std::string Medication::getFrequency() const { return frequency; }
-int Medication::getRefillCount() const { return number_of_refills; }
-std::string Medication::getRefillDate() const { return refill_date; }
+int getId()  { return medication_id; }
+int getInsuranceId()  { return medication_insurance_id; }
+std::string getName()  { return medication_name; }
+std::string getDosage()  { return medication_dosage; }
+std::string getFrequency()  { return medication_frequency; }
+int getRefillCount() { return medication_number_of_refills; }
+std::string getRefillDate() { return medication_refill_date; }
 
 // Setters
-void Medication::setId(int id) { medication_id = id; }
-void Medication::setInsuranceId(int id) { insurance_id = id; }
-void Medication::setName(const std::string& n) { name = n; }
-void Medication::setDosage(const std::string& d) { dosage = d; }
-void Medication::setFrequency(const std::string& f) { frequency = f; }
-void Medication::setRefillCount(int count) { number_of_refills = count; }
-void Medication::setRefillDate(const std::string& date) { refill_date = date; }
+void setId(int id) { medication_id = id; }
+void setInsuranceId(int id) { medication_insurance_id = id; }
+void setName(const std::string& n) { medication_name = n; }
+void setDosage(const std::string& d) { medication_dosage = d; }
+void setFrequency(const std::string& f) { medication_frequency = f; }
+void setRefillCount(int count) { medication_number_of_refills = count; }
+void setRefillDate(const std::string& date) { medication_refill_date = date; }
 
 // toString
-std::string Medication::toString() const {
+std::string Medication::toStringMed() const {
     std::ostringstream oss;
     oss << "Medication[ID=" << medication_id
-        << ", InsuranceID=" << insurance_id
-        << ", Name=" << name
-        << ", Dosage=" << dosage
-        << ", Frequency=" << frequency
-        << ", Refills=" << number_of_refills
-        << ", RefillDate=" << refill_date
+        << ", InsuranceID=" << medication_insurance_id
+        << ", Name=" << medication_name
+        << ", Dosage=" << medication_dosage
+        << ", Frequency=" << medication_frequency
+        << ", Refills=" << medication_number_of_refills
+        << ", RefillDate=" << medication_refill_date
         << "]";
     return oss.str();
 }

@@ -1,11 +1,11 @@
 #include <iostream>
-#include "Caregiver.hpp"
-#include "Doctor.hpp"
-#include "Medication.hpp"
-#include "User.hpp"
-#include "UserMedication.hpp"
-#include "Claim.hpp"
-#include "Insurance.hpp"
+#include "models/Caregiver.hpp"
+#include "models/Doctor.hpp"
+#include "models/Medication.hpp"
+#include "models/User.hpp"
+#include "models/UserMedication.hpp"
+#include "models/Claim.hpp"
+#include "models/Insurance.hpp"
 
 void printMenu() {
     std::cout << "\n--- Main Menu ---\n"
@@ -147,13 +147,13 @@ int main() {
             }
 
             case 8: { // View all
-                std::cout << "\n--- Caregiver ---\n" << cg.toString() << "\n";
-                std::cout << "\n--- Doctor ---\n" << doc.toString() << "\n";
-                std::cout << "\n--- Medication ---\n" << med.toString() << "\n";
-                std::cout << "\n--- User ---\n" << user.toString() << "\n";
-                std::cout << "\n--- UserMedication ---\n" << um.toString() << "\n";
-                std::cout << "\n--- Claim ---\n" << claim.toString() << "\n";
-                std::cout << "\n--- Insurance ---\n" << ins.toString() << "\n";
+                std::cout << "\n--- Caregiver ---\n" << cg.toStringCg() << "\n";
+                std::cout << "\n--- Doctor ---\n" << doc.toStringDoc() << "\n";
+                std::cout << "\n--- Medication ---\n" << med.toStringMed() << "\n";
+                std::cout << "\n--- User ---\n" << user.toStringUser() << "\n";
+                std::cout << "\n--- UserMedication ---\n" << um.toStringUserMeds() << "\n";
+                std::cout << "\n--- Claim ---\n" << claim.toStringClaim() << "\n";
+                std::cout << "\n--- Insurance ---\n" << ins.toStringIns() << "\n";
                 break;
             }
 

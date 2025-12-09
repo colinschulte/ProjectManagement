@@ -1,111 +1,77 @@
-<<<<<<< HEAD
-#include "Insurance.hpp"
-
-// Constructors
-Insurance::Insurance()
-    : insurance_id(0), provider_name(""), policy_number(""),
-      coverage_details(""), start_date(""), end_date("") {}
-
-Insurance::Insurance(int id,
-                     const std::string& provider,
-                     const std::string& policyNum,
-                     const std::string& coverage,
-                     const std::string& start,
-                     const std::string& end)
-    : insurance_id(id), provider_name(provider), policy_number(policyNum),
-      coverage_details(coverage), start_date(start), end_date(end) {}
-
-// Getters
-int Insurance::getId() const { return insurance_id; }
-std::string Insurance::getProviderName() const { return provider_name; }
-std::string Insurance::getPolicyNumber() const { return policy_number; }
-std::string Insurance::getCoverageDetails() const { return coverage_details; }
-std::string Insurance::getStartDate() const { return start_date; }
-std::string Insurance::getEndDate() const { return end_date; }
-
-// Setters
-void Insurance::setProviderName(const std::string& provider) { provider_name = provider; }
-void Insurance::setPolicyNumber(const std::string& policyNum) { policy_number = policyNum; }
-void Insurance::setCoverageDetails(const std::string& coverage) { coverage_details = coverage; }
-void Insurance::setStartDate(const std::string& start) { start_date = start; }
-void Insurance::setEndDate(const std::string& end) { end_date = end; }
-
-// toString
-std::string Insurance::toString() const {
-    std::ostringstream oss;
-    oss << "Insurance[ID=" << insurance_id
-        << ", Provider=" << provider_name
-        << ", PolicyNumber=" << policy_number
-        << ", Coverage=" << coverage_details
-        << ", StartDate=" << start_date
-        << ", EndDate=" << end_date
-        << "]";
-    return oss.str();
-}
-=======
-#include "insurance.h"
+#include "models/Insurance.hpp"
+#include <iostream>
 
 using namespace std;
 
+int insurance_id;
+string providerName;
+std::string policyNumber;
+std::string coverageDetails;
+std::string startDate;
+std::string endDate;
+
 // Constructor
-Insurance::Insurance(int id, const string& provider, const string& policyNum,
-                     const string& coverage, const string& start, const string& end)
-    : insuranceId(id), providerName(provider), policyNumber(policyNum),
-      coverageDetails(coverage), startDate(start), endDate(end) {}
+Insurance::Insurance()= default;
+Insurance::Insurance(int insId, const string& insProvider, const string& insPolicyNum,
+                     const string& insCoverage, const string& insStart, const string& insEnd)
+    : insurance_id(insId), providerName(insProvider), policyNumber(insPolicyNum),
+      coverageDetails(insCoverage), startDate(insStart), endDate(insEnd) {}
 
 // Getters
-int Insurance::getInsuranceId() const {
-    return insuranceId;
+int Insurance::getInsuranceId() {
+    return insurance_id;
 }
 
-string Insurance::getProviderName() const {
+string Insurance::getInsProviderName() {
     return providerName;
 }
 
-string Insurance::getPolicyNumber() const {
+string Insurance::getInsPolicyNumber() {
     return policyNumber;
 }
 
-string Insurance::getCoverageDetails() const {
+string Insurance::getInsCoverageDetails() {
     return coverageDetails;
 }
 
-string Insurance::getStartDate() const {
+string Insurance::getInsStartDate() {
     return startDate;
 }
 
-string Insurance::getEndDate() const {
+string Insurance::getInsEndDate() {
     return endDate;
 }
 
 // Setters
-void Insurance::setProviderName(const string& provider) {
+void Insurance::setInsProviderName(const string& provider) {
     providerName = provider;
 }
 
-void Insurance::setPolicyNumber(const string& policyNum) {
+void Insurance::setInsPolicyNumber(const string& policyNum) {
     policyNumber = policyNum;
 }
 
-void Insurance::setCoverageDetails(const string& coverage) {
+void Insurance::setInsCoverageDetails(const string& coverage) {
     coverageDetails = coverage;
 }
 
-void Insurance::setStartDate(const string& start) {
+void Insurance::setInsStartDate(const string& start) {
     startDate = start;
 }
 
-void Insurance::setEndDate(const string& end) {
+void Insurance::setInsEndDate(const string& end) {
     endDate = end;
 }
 
 // Display function
-void Insurance::displayInfo() const {
-    cout << "Insurance ID: " << insuranceId << endl;
-    cout << "Provider: " << providerName << endl;
-    cout << "Policy Number: " << policyNumber << endl;
-    cout << "Coverage: " << coverageDetails << endl;
-    cout << "Start Date: " << startDate << endl;
-    cout << "End Date: " << endDate << endl;
+std::string Insurance::toStringIns() const{
+    std::ostringstream oss;
+    oss  << "Insurance ID: " << insurance_id
+         << "Provider: " << providerName
+         << "Policy Number: " << policyNumber
+         << "Coverage: " << coverageDetails
+         << "Start Date: " << startDate
+         << "End Date: " << endDate
+        << "]";
+        return oss.str();
 }
->>>>>>> origin

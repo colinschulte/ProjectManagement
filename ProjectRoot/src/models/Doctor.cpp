@@ -1,16 +1,22 @@
-#include "Doctor.hpp"
+#include "models/Doctor.hpp"
 
 // --------------------
 // Constructors
 // --------------------
+int doctor_id;
+std::string name;
+std::string specialty;
+std::string phone;
+std::string email;
+std::string location;
 
 Doctor::Doctor()
     : doctor_id(0),
-      name(""),
-      specialty(""),
-      phone(""),
-      email(""),
-      location("") {}
+      doctor_name(""),
+      doctor_specialty(""),
+      doctor_phone(""),
+      doctor_email(""),
+      doctor_location("") {}
 
 Doctor::Doctor(int docId,
                const std::string& docName,
@@ -19,35 +25,35 @@ Doctor::Doctor(int docId,
                const std::string& docEmail,
                const std::string& docLocation)
     : doctor_id(docId),
-      name(docName),
-      specialty(docSpecialty),
-      phone(docPhone),
-      email(docEmail),
-      location(docLocation) {}
+      doctor_name(docName),
+      doctor_specialty(docSpecialty),
+      doctor_phone(docPhone),
+      doctor_email(docEmail),
+      doctor_location(docLocation) {}
 
 
 // --------------------
 // Getters
 // --------------------
 
-int Doctor::getId() const { return doctor_id; }
-std::string Doctor::getName() const { return name; }
-std::string Doctor::getSpecialty() const { return specialty; }
-std::string Doctor::getPhone() const { return phone; }
-std::string Doctor::getEmail() const { return email; }
-std::string Doctor::getLocation() const { return location; }
+int Doctor::getDocId()  { return doctor_id; }
+std::string Doctor::getDocName()  { return name; }
+std::string Doctor::getDocSpecialty()  { return specialty; }
+std::string Doctor::getDocPhone()  { return phone; }
+std::string Doctor::getDocEmail()  { return email; }
+std::string Doctor::getDocLocation()  { return location; }
 
 
 // --------------------
 // Basic validation (no regex, no extra includes)
 // --------------------
 
-bool Doctor::isValidEmail(const std::string& email) {
+bool isValidEmail(const std::string& email) {
     return email.find('@') != std::string::npos &&
            email.find('.') != std::string::npos;
 }
 
-bool Doctor::isValidPhone(const std::string& phone) {
+bool isValidPhone(const std::string& phone) {
     for (char c : phone) {
         if (!(isdigit(c) || c == '-' || c == ' ')) {
             return false;
@@ -61,29 +67,29 @@ bool Doctor::isValidPhone(const std::string& phone) {
 // Setters with validation
 // --------------------
 
-void Doctor::setId(int id) { doctor_id = id; }
+void setDocId(int id) { doctor_id = id; }
 
-void Doctor::setName(const std::string& n) {
+void setDocName(const std::string& n) {
     if (n.empty()) throw std::invalid_argument("Name cannot be empty.");
     name = n;
 }
 
-void Doctor::setSpecialty(const std::string& s) {
+void setDocSpecialty(const std::string& s) {
     if (s.empty()) throw std::invalid_argument("Specialty cannot be empty.");
     specialty = s;
 }
 
-void Doctor::setPhone(const std::string& p) {
+void setDocPhone(const std::string& p) {
     if (!isValidPhone(p)) throw std::invalid_argument("Invalid phone number.");
     phone = p;
 }
 
-void Doctor::setEmail(const std::string& e) {
+void setDocEmail(const std::string& e) {
     if (!isValidEmail(e)) throw std::invalid_argument("Invalid email address.");
     email = e;
 }
 
-void Doctor::setLocation(const std::string& loc) {
+void setDocLocation(const std::string& loc) {
     if (loc.empty()) throw std::invalid_argument("Location cannot be empty.");
     location = loc;
 }
@@ -93,7 +99,7 @@ void Doctor::setLocation(const std::string& loc) {
 // toString()
 // --------------------
 
-std::string Doctor::toString() const {
+std::string Doctor::toStringDoc() const {
     std::ostringstream oss;
     oss << "Doctor[ID=" << doctor_id
         << ", Name=" << name
