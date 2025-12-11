@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Models"
+    "\\ProjectRoot",
+    "\\ProjectRoot\\src"
   ],
-  "SelectedNode": "\\Models\\main.cpp",
+  "SelectedNode": "\\ProjectRoot\\TotalCarePlus.exe",
   "PreviewInSolutionExplorer": false
 }

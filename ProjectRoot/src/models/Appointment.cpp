@@ -1,4 +1,5 @@
 #include "models/Appointment.hpp"
+#include <string>
 
 // --------------------
 // Constructors

@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\maely\\source\\repos\\ProjectManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maely\\source\\repos\\ProjectManagement\\Models\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{423FAB5F-5CD1-2A55-A1AB-2D84A3B6DE39}|ProjectManagement.vcxproj|C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\projectroot\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{423FAB5F-5CD1-2A55-A1AB-2D84A3B6DE39}|ProjectManagement.vcxproj|solutionrelative:projectroot\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{423FAB5F-5CD1-2A55-A1AB-2D84A3B6DE39}|ProjectManagement.vcxproj|C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\projectroot\\src\\models\\Appointment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{423FAB5F-5CD1-2A55-A1AB-2D84A3B6DE39}|ProjectManagement.vcxproj|solutionrelative:projectroot\\src\\models\\Appointment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\maely\\source\\repos\\ProjectManagement\\Models\\main.cpp",
-              "RelativeDocumentMoniker": "Models\\main.cpp",
-              "ToolTip": "C:\\Users\\maely\\source\\repos\\ProjectManagement\\Models\\main.cpp",
-              "RelativeToolTip": "Models\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\ProjectRoot\\src\\main.cpp",
+              "RelativeDocumentMoniker": "ProjectRoot\\src\\main.cpp",
+              "ToolTip": "C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\ProjectRoot\\src\\main.cpp",
+              "RelativeToolTip": "ProjectRoot\\src\\main.cpp",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-21T01:36:16.955Z",
+              "WhenOpened": "2025-12-10T21:48:56.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Appointment.cpp",
+              "DocumentMoniker": "C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\ProjectRoot\\src\\models\\Appointment.cpp",
+              "RelativeDocumentMoniker": "ProjectRoot\\src\\models\\Appointment.cpp",
+              "ToolTip": "C:\\Users\\pezhe\\source\\repos\\ProjectManagement\\ProjectRoot\\src\\models\\Appointment.cpp",
+              "RelativeToolTip": "ProjectRoot\\src\\models\\Appointment.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-10T21:40:32.099Z",
               "EditorCaption": ""
             }
           ]

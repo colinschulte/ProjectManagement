@@ -1,0 +1,26 @@
+﻿  MakeAppointmentController.cpp
+  ReadAppointmentController.cpp
+  ReadInsuranceController.cpp
+  ReadMedicationsController.cpp
+  UserLoginController.cpp
+  main.cpp
+C:\Users\pezhe\source\repos\ProjectManagement\projectroot\src\main.cpp(126,68): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Appointment.cpp
+  Caregiver.cpp
+  Claim.cpp
+  Doctor.cpp
+  Insurance.cpp
+  Medication.cpp
+  User.cpp
+  UserMedication.cpp
+  Dummy.cpp
+  AppointmentView.cpp
+  ClaimView.cpp
+  HomeView.cpp
+  InsuranceView.cpp
+  LoginView.cpp
+  Generating Code...
+  Compiling...
+  MedicationsView.cpp
+  Generating Code...
+  ProjectManagement.vcxproj -> C:\Users\pezhe\source\repos\ProjectManagement\x64\Debug\ProjectManagement.exe

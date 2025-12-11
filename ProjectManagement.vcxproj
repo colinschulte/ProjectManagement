@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{423FAB5F-5CD1-2A55-A1AB-2D84A3B6DE39}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>ProjectRoot/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="projectroot\src\controllers\MakeAppointmentController.cpp" />
+    <ClCompile Include="projectroot\src\controllers\ReadAppointmentController.cpp" />
+    <ClCompile Include="projectroot\src\controllers\ReadInsuranceController.cpp" />
+    <ClCompile Include="projectroot\src\controllers\ReadMedicationsController.cpp" />
+    <ClCompile Include="projectroot\src\controllers\UserLoginController.cpp" />
+    <ClCompile Include="projectroot\src\main.cpp" />
+    <ClCompile Include="projectroot\src\models\Appointment.cpp" />
+    <ClCompile Include="projectroot\src\models\Caregiver.cpp" />
+    <ClCompile Include="projectroot\src\models\Claim.cpp" />
+    <ClCompile Include="projectroot\src\models\Doctor.cpp" />
+    <ClCompile Include="projectroot\src\models\Insurance.cpp" />
+    <ClCompile Include="projectroot\src\models\Medication.cpp" />
+    <ClCompile Include="projectroot\src\models\User.cpp" />
+    <ClCompile Include="projectroot\src\models\UserMedication.cpp" />
+    <ClCompile Include="projectroot\src\utils\Dummy.cpp" />
+    <ClCompile Include="projectroot\src\views\AppointmentView.cpp" />
+    <ClCompile Include="projectroot\src\views\ClaimView.cpp" />
+    <ClCompile Include="projectroot\src\views\HomeView.cpp" />
+    <ClCompile Include="projectroot\src\views\InsuranceView.cpp" />
+    <ClCompile Include="projectroot\src\views\LoginView.cpp" />
+    <ClCompile Include="projectroot\src\views\MedicationsView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="projectroot\include\controllers\MakeAppointmentController.h" />
+    <ClInclude Include="projectroot\include\controllers\MakeAppointmentController.hpp" />
+    <ClInclude Include="projectroot\include\controllers\ReadAppointmentController.h" />
+    <ClInclude Include="projectroot\include\controllers\ReadAppointmentController.hpp" />
+    <ClInclude Include="projectroot\include\controllers\ReadInsuranceController.h" />
+    <ClInclude Include="projectroot\include\controllers\ReadInsuranceController.hpp" />
+    <ClInclude Include="projectroot\include\controllers\ReadMedicationsController.h" />
+    <ClInclude Include="projectroot\include\controllers\ReadMedicationsController.hpp" />
+    <ClInclude Include="projectroot\include\controllers\UserLoginController.h" />
+    <ClInclude Include="projectroot\include\controllers\UserLoginController.hpp" />
+    <ClInclude Include="projectroot\include\models\Appointment.hpp" />
+    <ClInclude Include="projectroot\include\models\Caregiver.hpp" />
+    <ClInclude Include="projectroot\include\models\Claim.hpp" />
+    <ClInclude Include="projectroot\include\models\Doctor.hpp" />
+    <ClInclude Include="projectroot\include\models\Insurance.hpp" />
+    <ClInclude Include="projectroot\include\models\Medication.hpp" />
+    <ClInclude Include="projectroot\include\models\User.hpp" />
+    <ClInclude Include="projectroot\include\models\UserMedication.hpp" />
+    <ClInclude Include="projectroot\include\views\AppointmentsView.hpp" />
+    <ClInclude Include="projectroot\include\views\ClaimView.hpp" />
+    <ClInclude Include="projectroot\include\views\HomeView.hpp" />
+    <ClInclude Include="projectroot\include\views\InsuranceView.hpp" />
+    <ClInclude Include="projectroot\include\views\LoginView.hpp" />
+    <ClInclude Include="projectroot\include\views\MedicationsView.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
